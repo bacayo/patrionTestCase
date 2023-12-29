@@ -2,7 +2,7 @@ import axios, { isAxiosError } from "axios";
 import { GeoLocation, Weather } from "@/types";
 
 // need this url to get city geolocation. Get lat and lot in order to send request to get weather data
-const locationBaseURl = "http://api.openweathermap.org/geo/1.0/direct";
+const locationBaseURl = "https://api.openweathermap.org/geo/1.0/direct";
 const weatherBaseUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 export const getCoordinates = async (city: string, appid: string) => {
