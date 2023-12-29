@@ -17,16 +17,16 @@ interface WeatherProps {
 // Display weather information selected city -> temprature, feels, wind, sunrise and sunset
 const Weather = ({ data }: WeatherProps) => {
   return (
-    <div className="flex flex-row-reverse items-center justify-between">
+    <div className="flex w-full flex-row-reverse items-center justify-between">
       {data?.weather.map((item) => (
-        <div key={item.id}>
+        <React.Fragment key={item.id}>
           <Image
             src={`https://openweathermap.org/img/wn/${item.icon}@2x.png`}
             alt="logo"
             width={100}
             height={100}
           />
-        </div>
+        </React.Fragment>
       ))}
       <div className="mt-8 flex flex-col items-start justify-center gap-2">
         <div className="flex items-center gap-2">
@@ -38,8 +38,8 @@ const Weather = ({ data }: WeatherProps) => {
           <p>Hissedilen {data?.main.feels_like.toFixed()} °C</p>
         </div>
         <div className="flex items-center gap-2">
-          <Wind /> Rüzgar {data?.wind.speed.toFixed()} km/h
-          <p></p>
+          <Wind /> Rüzgar
+          <p>{data?.wind.speed.toFixed()} km/h</p>
         </div>
         <div className="flex items-center gap-2">
           <Sunrise />

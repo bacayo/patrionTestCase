@@ -23,9 +23,13 @@ export const getCoordinates = async (city: string, appid: string) => {
       name,
     };
   } catch (error) {
-    if (isAxiosError(error)) {
-      console.log(error);
-    }
+    console.log(error);
+    return {
+      error: error,
+    };
+    // if (isAxiosError(error)) {
+    //   console.log(error);
+    // }
   }
 };
 
