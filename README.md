@@ -30,7 +30,7 @@ Requirements:
   The application provide Türkiye map interface where users can select the location for which they want to check the weather.
 
 - Weather Data:
-  The application fetch real-time weather data for the specified location.
+  The application fetch real-time weather data for the specified location. Weather data provided by [OpenWeatherMap API](https://openweathermap.org/api)
 
 - Display:
   Display the retrieved weather information, including temperature, humidity, wind speed, and a brief description of the weather conditions.
